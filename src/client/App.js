@@ -1,9 +1,35 @@
 import React, { Component } from 'react';
 import './app.css';
 import ReactImage from './react.png';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Container,
+    Row,
+    Col,
+    Jumbotron,
+    Button
+} from 'reactstrap';
 
 export default class App extends Component {
-  state = { username: null };
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+        username: null,
+        isOpen: false
+    };
+}
+toggle() {
+    this.setState({
+        isOpen: !this.state.isOpen
+    });
+}
 
   componentDidMount() {
     fetch('/api/getUsername')
@@ -15,8 +41,17 @@ export default class App extends Component {
     const { username } = this.state;
     return (
       <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
+        <Navbar color="inverse" light expand="md">
+            <NavbarBrand href="/">{username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <NavLink href="/about">About</NavLink>
+                    </NavItem>
+                </Nav>
+            </Collapse>
+        </Navbar>
       </div>
     );
   }
