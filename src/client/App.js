@@ -1,34 +1,13 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container,
-    Row,
-    Col,
-    Jumbotron,
-    Button
-} from 'reactstrap';
+import Header from './Header';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.toggle = this.toggle.bind(this);
     this.state = {
         username: null,
-        isOpen: false
     };
-}
-toggle() {
-    this.setState({
-        isOpen: !this.state.isOpen
-    });
 }
 
   componentDidMount() {
@@ -38,20 +17,12 @@ toggle() {
   }
 
   render() {
-    const { username } = this.state;
+    const headerData = { 
+        name: this.state.username
+    };
     return (
       <div>
-        <Navbar color="inverse" light expand="md">
-            <NavbarBrand href="/">{username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="ml-auto" navbar>
-                    <NavItem>
-                        <NavLink href="/about">About</NavLink>
-                    </NavItem>
-                </Nav>
-            </Collapse>
-        </Navbar>
+        <Header headerData={headerData}/>
       </div>
     );
   }
