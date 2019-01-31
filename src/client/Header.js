@@ -14,35 +14,48 @@ import {
     Button
 } from 'reactstrap';
 import './app.css';
+import ContentLoading from './ContentLoading';
+import Logo from './Logo';
+import 'rc-texty/assets/index.css';
+import Typing from 'react-typing-animation';
+
 export default class Header extends Component{
 	constructor(props) {
 		super(props);
-		this.toggle = this.toggle.bind(this);
-		this.state = {
-			isOpen: false
-		};
+		this.state={isLoading: true};
 	}
-	toggle() {
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
-	}
+
+
 
 	render(){
 		return(
-			<div className = "header-wide-content">
-            <Navbar color="inverse" dark expand="md">
-                <NavbarBrand href="/">{this.props.headerData.name ? <h1>{`Hey, I'm ${this.props.headerData.name}`}</h1> : <h1>Loading.. please wait!</h1>}</NavbarBrand>
-                <NavbarToggler onClick={this.toggle} />
-                <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/about">About</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        </div>
+			<div className = "header-wide">
+				<Navbar color="inverse" dark expand="md">
+					<NavbarBrand><Logo/></NavbarBrand>
+				</Navbar>
+				<div className="header-wide-content">
+					<div className="heading-text-large flex-box">
+						<span>&lsaquo;b</span>
+						<Typing speed={100}>
+							<span>iagio&nbsp;</span>
+						</Typing>
+						<span>l</span>
+						<Typing speed={100}>
+							<div>iberto&nbsp;</div>
+						</Typing>
+						<span>&frasl;&rsaquo;</span>
+					</div>
+				</div>
+				<div className="header-wide-content">
+					<div className="header-wide-content-title">
+						{this.props.headerData.title ? <h1>{`${this.props.headerData.title}`}</h1> : <ContentLoading/>}
+					</div>
+					<div className="header-wide-content-text">
+						{this.props.headerData.subtitle ? <h4>{`${this.props.headerData.subtitle}`}</h4>: <ContentLoading/>}
+					</div>
+				</div>
+				
+			</div>
 		)
 	}
 }

@@ -15,8 +15,11 @@
         "babel-polyfill": "^6.26.0",
         "bootstrap": "^4.2.1",
         "express": "^4.16.3",
+        "rc-texty": "^0.2.0",
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
+        "react-typing-animation": "^1.6.2",
+        "react-typing-effect": "^1.0.4",
         "reactstrap": "^6.5.0"
     },
     "devDependencies": {

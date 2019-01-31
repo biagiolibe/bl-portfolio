@@ -11,14 +11,20 @@ export default class App extends Component {
 }
 
   componentDidMount() {
-    fetch('/api/getUsername')
+    fetch('/api/getUserData')
       .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
+      .then(user => this.setState({ 
+          username: user.username, 
+            title: user.title,
+            subtitle: user.subtitle
+        }));
   }
 
   render() {
     const headerData = { 
-        name: this.state.username
+        name: this.state.username,
+        title: this.state.title,
+        subtitle: this.state.subtitle
     };
     return (
       <div>
