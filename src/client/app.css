@@ -7,16 +7,27 @@ body {
   text-align: center;
   margin: auto;
 }
+/*
+* Override Reactstrap classes
+*/
+
+/*
+* End override Reactstrap classes
+*/
+
+.header-nav{
+  height: 10vh;
+}
 
 .header-wide{
   width:100%;
   height:100vh;
   /* height:calc(100vh - 1px); */
   background-color:#2a2a2a;
+  /*background-image: url('/public/images/coding.jpg');*/
   background-size:cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .header-wide-content{
@@ -24,12 +35,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  text-align: center;
 }
 
-.heading-text-large{
-  font-size: 72px;
+
+.heading-loading-img{
+  max-width: 60vW;
+  max-height: 100vh;
 }
 
-.flex-box{
-  display: flex;
+div.animate-translate-up{
+  animation-name: translate-up;
+  animation-duration: 1.5s;
+  animation-delay: 6.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes translate-up{
+  from {transform : translateY(0vh) } /* slide up to off-screen */
+  to { transform : translateY(-100vh) }
 }
