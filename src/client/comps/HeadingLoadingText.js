@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 //import Logo from '../../../public/bl-animation.gif';
 import 'rc-texty/assets/index.css';
-import Typing, { Cursor } from 'react-typing-animation';
 
 export class HeadingLoadingText extends Component{
 	constructor(props){
@@ -20,7 +19,7 @@ export class HeadingLoadingText extends Component{
 
 	render(){
 		return(
-			<div className="header-wide-content animate-translate-up">
+			<div className="header-wide-loading-content animate-translate-up">
 				<img src="../../../public/bl-animation.gif" className="heading-loading-img" alt="Biagio Liberto" />
 			</div>
 		)

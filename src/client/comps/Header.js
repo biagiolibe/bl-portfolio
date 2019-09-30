@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import {HeadingLoadingText} from './HeadingLoadingText';
 import {HeaderSection} from './HeaderSection';
+import HeaderSectionContainer from '../redux/containers/HeaderSectionContainer';
 
 export default class Header extends Component{
 	constructor(props) {
@@ -19,7 +20,7 @@ export default class Header extends Component{
 		return(
 			<div className = "header-wide">
 				<HeadingLoadingText onLoadingComplete={this.toggleLoadingTextCompleted}/>
-				{this.state.isLoadingTextCompleted && <HeaderSection />}
+				{this.state.isLoadingTextCompleted && <HeaderSectionContainer />}
 			</div>
 		)
 	}

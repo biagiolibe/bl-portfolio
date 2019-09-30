@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ContentLoading from './ContentLoading';
 
-export default class HeadingText extends Component{
+export class HeadingText extends Component{
 	constructor(props){
 		super(props);
 		this.state={

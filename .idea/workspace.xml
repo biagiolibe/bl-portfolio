@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c37899b-268f-40c0-8ea4-b85e4ce28a8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ContentLoading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Logo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/comps/HeaderSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/comps/HeaderSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/comps/HeadingText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/comps/HeadingText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/comps/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/comps/Logo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="1383" />
     <option name="width" value="1280" />
     <option name="height" value="721" />
   </component>
@@ -72,6 +70,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -102,15 +101,15 @@
       <option name="presentableId" value="Default" />
       <updated>1549150955615</updated>
       <workItem from="1549150961536" duration="8000" />
-      <workItem from="1569659439355" duration="655000" />
+      <workItem from="1569659439355" duration="834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="663000" />
+    <option name="totallyTimeSpent" value="842000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="721" extended-state="0" />
+    <frame x="0" y="1383" width="1280" height="721" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />

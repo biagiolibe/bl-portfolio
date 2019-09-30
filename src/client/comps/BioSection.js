@@ -11,7 +11,7 @@ export class BioSection extends Component{
 	render(){
 		return(
 			<div className="bio-section-content">
-				
+				<h3>Bio title</h3>
 			</div>
 		)
 	}
