@@ -9,10 +9,11 @@ export class HeaderSection extends Component{
 	}
 	
 	render(){
-		console.log('height -> '+this.props.height);
-		console.log('margin -> '+this.props.margin)
+		const style={
+			height:100-this.props.height
+		};
 		return(
-			<div class="header-intro">
+			<div className="header-intro" style={style}>
 				{/*
 				<Navbar color="inverse" light expand="md" className="header-nav">
 					<NavbarBrand><Logo/></NavbarBrand>
