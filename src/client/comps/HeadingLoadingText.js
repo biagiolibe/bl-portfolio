@@ -14,7 +14,7 @@ export class HeadingLoadingText extends Component{
 	toggleLoadingComplete(){
 		setTimeout(()=>{
 			this.props.onLoadingComplete();
-		}, 8000);
+		}, 6000);
 	}
 
 	render(){

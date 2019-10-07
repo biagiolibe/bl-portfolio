@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
-import {HeaderSection} from '../../comps/HeaderSection'
+import { SkillSection } from '../../comps/SkillSection';
 
 const mapStateToProps = (state) => {
+  console.log('updated ', state.scrollTo);
   return{
     height: state.scrollTo
   }
@@ -9,4 +10,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps
-)(HeaderSection)
+)(SkillSection)

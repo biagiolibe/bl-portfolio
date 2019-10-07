@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {} from 'reactstrap';
 
-import {BioSection} from './BioSection';
+import BioSectionContainer from '../redux/containers/BioSectionContainer';
 import {SkillSection} from './SkillSection';
 
 export default class Body extends Component{
@@ -13,7 +13,7 @@ export default class Body extends Component{
 	render(){
 		return(
 			<div className = "body-content">
-				<BioSection />
+				<BioSectionContainer />
 				<SkillSection />
 			</div>
 		)
