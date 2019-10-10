@@ -3,7 +3,7 @@ import {HeaderSection} from '../../comps/HeaderSection'
 
 const mapStateToProps = (state) => {
   return{
-    height: state.scrollTo
+    height: state.scrolling.scrolled
   }
 };
 

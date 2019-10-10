@@ -2,9 +2,9 @@ import { connect } from 'react-redux'
 import { BioSection } from '../../comps/BioSection';
 
 const mapStateToProps = (state) => {
-  console.log('updated ', state.scrollTo);
+  console.log('updated ', state.scrolling.scrolled);
   return{
-    height: state.scrollTo
+    height: state.scrolling.scrolled
   }
 };
 

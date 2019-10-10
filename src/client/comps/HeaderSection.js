@@ -15,13 +15,13 @@ export class HeaderSection extends Component{
 	}
 		
 	render(){
-		let isInTop = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
-		console.log('header top -> ',isInTop);
+		let animationActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
+		console.log('header active -> ',animationActive);
 		return(
-			<ScrollableDivSection className="header-intro" 
+			<ScrollableDivSection className="header-intro section" 
 			ref={this.ref}
-			hasToScroll={isInTop}
-			scroll={this.props.height}
+			hasToScroll={animationActive}
+			scroll={(-this.props.height)}
 			>
 				{/*
 				<Navbar color="inverse" light expand="md" className="header-nav">

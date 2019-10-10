@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import scrollTo from './scrollTo'
+import scrolling from './scrolling'
 
 export default combineReducers({
-  scrollTo
+  scrolling
 })

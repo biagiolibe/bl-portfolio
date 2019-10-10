@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { scroll } from './redux/actions';
-import './app.css';
+import {scroll} from './redux/actions';
+import './app.scss';
 import Header from './comps/Header';
 import Body from './comps/Body';
 import Footer from './comps/Footer';
@@ -23,10 +23,10 @@ componentWillUnmount() {
 
 handleScroll = () => {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = winScroll / height;
+  const windowHeight = window.innerHeight || window.screen.height;
+  const scrolled = winScroll % windowHeight;
 
-  const produceScroll = ()=> this.props.dispatch({type:'SCROLL', toHeight:scrolled});
+  const produceScroll = ()=> this.props.dispatch(scroll(scrolled, scrolled));
   
   produceScroll();
   

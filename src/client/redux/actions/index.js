@@ -1,4 +1,5 @@
-export const scroll = winScroll => ({
+export const scroll = (winScroll,height) => ({
 	type: 'SCROLL',
-	toHeight: winScroll
+	scrolled: winScroll,
+	height: height
   })

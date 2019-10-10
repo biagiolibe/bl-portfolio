@@ -1,9 +1,22 @@
+/*
+* Initialize themer variables
+*/
+// Font
+$main-font-color: #4f4f4f;
+$secondary-font-color: #ffffff;
+
+//Background
+$main-background-color: #ffffff;
+$secondary-background-color: #eda900;
+
+
+
 body, html{
   height: 100%;
 }
 
 body {
-  color: #4f4f4f;
+  color: $main-font-color;
   text-align: center;
   margin: auto;
 }
@@ -14,15 +27,6 @@ body {
 /*
 * End override Reactstrap classes
 */
-
-.header-nav{
-  height: 10vh;
-}
-
-.header-intro{
-  position: fixed;
-  height: 100vh;
-}
 
 /*
 display: -webkit-box;
@@ -50,27 +54,27 @@ display: -webkit-box;
 }
 
 .header-wide-loading-content{
-  color: #1f1f1f;
+  color: $secondary-font-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100%;
   justify-content: center;
-  background-color: rgb(54, 54, 54);
+  background-color: $main-font-color;
   position: absolute;
   text-align: center;
 }
 
 .header-wide-content{
-  color: #4f4f4f;
+  color: $main-font-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100vw;
   justify-content: center;
-  background-color: #fff;
+  background-color: $secondary-background-color;
   text-align: center;
 }
 
@@ -91,27 +95,37 @@ div.animate-translate-up{
 /*
 Body style
 */
-
-.body-content{
+.section{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  height:100vh;
   justify-content: center;
-  background-color: #4fff;
   text-align: center;
+}
+
+
+
+.body-content{
+  background-color: $main-background-color;
+  overflow: hidden;
   position: absolute;
 }
 
+.header-intro{
+  position: fixed;
+  height: 100vh;
+}
+
 .bio-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height:100vh;
-  width: 100vw;
-  justify-content: center;
-  background-color: #4fff;
-  text-align: center;
+  z-index: 3;
+  position: relative;
+}
+
+.skill-section{
+  z-index: 9;
+  position: relative;
 }
 
 

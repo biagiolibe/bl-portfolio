@@ -15,7 +15,7 @@ export class BioSection extends Component{
 		let isInTop = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
 		console.log('bio top -> ',isInTop);
 		return(
-			<ScrollableDivSection className="bio-section" 
+			<ScrollableDivSection className="bio-section section" 
 			ref={this.ref}
 			hasToScroll={isInTop}
 			scroll={this.props.height}
