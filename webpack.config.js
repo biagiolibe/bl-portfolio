@@ -24,7 +24,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.gif$/,
+        test: /\.(gif)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",

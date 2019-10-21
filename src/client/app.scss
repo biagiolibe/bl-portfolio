@@ -1,14 +1,42 @@
 /*
 * Initialize themer variables
 */
-// Font
-$main-font-color: #4f4f4f;
-$secondary-font-color: #ffffff;
 
-//Background
-$main-background-color: #ffffff;
-$secondary-background-color: #eda900;
+// palette.scss
+//@import '../../public/css/palette.scss';
 
+/* Main site color palette */
+
+/* Background */
+/* HSL */
+/*
+$color1: hsla(227%, 24%, 34%, 1);
+$color2: hsla(45%, 89%, 57%, 1);
+$color3: hsla(160%, 72%, 34%, 1);
+$color4: hsla(2%, 100%, 66%, 1);
+$color5: hsla(0%, 0%, 11%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(65, 74, 107, 1);
+$color2: rgba(243, 193, 48, 1);
+$color3: rgba(24, 150, 108, 1);
+$color4: rgba(255, 88, 81, 1);
+$color5: rgba(29, 29, 29, 1);
+*/
+
+/* EX */
+$bgcolor-white: #ffffff;
+//$bgcolor-1: #414A6B;
+$bgcolor-1: #717da8;
+$bgcolor-2: #f3c130;
+$bgcolor-3: #18966c;
+$bgcolor-4: #ff5851;
+$bgcolor-5: #1c1b20;
+
+/* Font */
+$fontcolor-white:#ffffff;
+$fontcolor-1: #4f4f4f;
 
 
 body, html{
@@ -16,7 +44,7 @@ body, html{
 }
 
 body {
-  color: $main-font-color;
+  color: $fontcolor-1;
   text-align: center;
   margin: auto;
 }
@@ -54,43 +82,36 @@ display: -webkit-box;
 }
 
 .header-wide-loading-content{
-  color: $secondary-font-color;
+  color: $fontcolor-white;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100%;
   justify-content: center;
-  background-color: $main-font-color;
-  position: absolute;
+  background-color: $bgcolor-1;
+  position: fixed;
+  z-index: 101;
   text-align: center;
 }
 
 .header-wide-content{
-  color: $main-font-color;
+  color: $fontcolor-1;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100vw;
   justify-content: center;
-  background-color: $secondary-background-color;
+  background-color: $bgcolor-white;
   text-align: center;
 }
 
-
 .heading-loading-img{
-  max-width: 60vW;
-  max-height: 100vh;
+  max-width: 25vw;
+  
 }
 
-div.animate-translate-up{
-  animation-name: translate-up;
-  animation-duration: 1.5s;
-  animation-delay: 6.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
 
 /*
 Body style
@@ -105,10 +126,8 @@ Body style
   text-align: center;
 }
 
-
-
 .body-content{
-  background-color: $main-background-color;
+  background-color: $bgcolor-white;
   overflow: hidden;
   position: absolute;
 }
@@ -121,15 +140,46 @@ Body style
 .bio-section{
   z-index: 3;
   position: relative;
+  background-color: $bgcolor-4;
+  color: $fontcolor-white;
 }
 
 .skill-section{
   z-index: 9;
   position: relative;
+  background-color: $bgcolor-white;
 }
+
+
+/**
+* Animation
+**/
+
+div.animate{
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  &.animate-translate-up{
+    animation-name: translate-up;
+    animation-duration: 1.5s;
+    animation-delay: 6.5s;
+  }
+  
+  &.animate-translate-left{
+    animation-name: translate-side;
+    animation-duration: 1s;
+    animation-delay: 3.5s;
+  }
+}
+
 
 
 @keyframes translate-up{
   from {transform : translateY(0vh) } /* slide up to off-screen */
   to { transform : translateY(-100vh) }
+}
+
+@keyframes translate-side{
+  from {transform : translate(0vw) } 
+  to { transform : translate(-100vw) }/* slide left to off-screen */
 }

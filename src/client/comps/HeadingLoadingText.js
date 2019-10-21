@@ -14,13 +14,13 @@ export class HeadingLoadingText extends Component{
 	toggleLoadingComplete(){
 		setTimeout(()=>{
 			this.props.onLoadingComplete();
-		}, 6000);
+		}, 4000);
 	}
 
 	render(){
 		return(
-			<div className="header-wide-loading-content animate-translate-up">
-				<img src="../../../public/bl-animation.gif" className="heading-loading-img" alt="Biagio Liberto" />
+			<div className="header-wide-loading-content animate animate-translate-left">
+				<img src="../../../public/BL_logo-animation.gif" className="heading-loading-img" alt="Biagio Liberto" />
 			</div>
 		)
 	}
