@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import styles from '../sass/app.scss';
 
-
-
 export const ScrollableDivSection = 
 	styled.div.attrs(props => ({
 		style: {

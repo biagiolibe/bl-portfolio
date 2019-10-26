@@ -3,10 +3,11 @@
 */
 
 /* Import Google font */
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Fascinate+Inline|Lato&display=swap');
 
 html{
 	body {
+		font-family: $fontfamily-primary;
 		color: $fontcolor-1;
 		background: $bgcolor-white;
 		text-align: center;

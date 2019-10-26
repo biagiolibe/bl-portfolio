@@ -27,7 +27,7 @@ export class BioSection extends Component{
 							I have a strong motivation, a high enthusiasm and a great passion for everything I do, so issues become <Keyword background={styles.bgcolorWhite} textColor={styles.fontcolor1}>“challenges”</Keyword>.
 						</div>
 						<div>
-							A <Keyword background={styles.bgcolor5} textColor={styles.fontcolor2}>“steady”</Keyword> will in pursuing my goals is my strenght. Aiming always high is my life way.
+							A <Keyword background={styles.bgcolor4} textColor={styles.fontcolor2}>“steady”</Keyword> will in pursuing my goals is my strenght. Aiming always high is my life way.
 						</div>
 					</div>
 				</div>

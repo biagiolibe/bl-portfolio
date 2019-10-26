@@ -7,9 +7,9 @@ $bgcolor-white: #ffffff;
 $bgcolor-1: #717da8;
 $bgcolor-1-dark: #414A6B;
 $bgcolor-2: #f3c130;
-$bgcolor-3: #18966c;
-$bgcolor-4: #ff5851;
-$bgcolor-5: #1c1b20;
+$bgcolor-3: #ff5851;
+$bgcolor-4: #1c1b20;
+$bgcolor-5: #18966c;
 
 /* Font */
 $fontcolor-white:#ffffff;
@@ -19,6 +19,7 @@ $fontcolor-3: #414a6b;
 
 $fontfamily-journal:'DM Serif Text';
 $fontfamily-title:'Fascinate Inline';
+$fontfamily-primary:'Lato';
 
 :export { 
 	bgcolorWhite: $bgcolor-white;
