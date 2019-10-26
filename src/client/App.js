@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {scroll} from './redux/actions';
-import './app.scss';
+import './sass/app.scss';
 import Header from './comps/Header';
 import Body from './comps/Body';
 import Footer from './comps/Footer';

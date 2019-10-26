@@ -1,0 +1,68 @@
+/*
+Body style
+*/
+
+.padding{
+	padding: 12vw;
+}
+
+.keyword{
+	box-shadow: 1px 1px 12px -2px #1c1b20;
+	&.black-yellow{
+		background: $bgcolor-5;
+		color: $fontcolor-2;
+	}
+	&.grey-black{
+		background: $bgcolor-white;
+		color: $fontcolor-1;
+	}
+}
+
+.section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	height:100vh;
+	justify-content: center;
+	text-align: center;
+}
+
+.section-title{
+	top: 30px;
+	position: absolute;
+	left: 10vw;
+	font-size: 30px;
+	color: $fontcolor-3;
+	font-family: $fontfamily-title;
+}
+
+.body-content{
+	background-color: $bgcolor-white;
+	overflow: hidden;
+	position: absolute;
+}
+
+
+
+.bio-section{
+	z-index: 3;
+	position: relative;
+	background-color: $bgcolor-2;
+
+	.aboutme-content-text{
+		color: $fontcolor-1;
+		font-size: 5vh;
+		font-family: $fontfamily-journal;
+		div{
+		padding: 5vh 0;
+		}
+	}	
+}
+  
+  
+.skill-section{
+	z-index: 9;
+	position: relative;
+	background-color: $bgcolor-white;
+}

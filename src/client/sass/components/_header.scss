@@ -1,0 +1,43 @@
+/*
+* Header Section component styles
+*/
+
+.header-wide{
+	width:100%;
+	height:100vh;
+}
+
+.header-intro{
+	position: fixed;
+	height: 100vh;
+}
+
+.header-wide-loading-content{
+	color: $fontcolor-white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	background-color: $bgcolor-1;
+	position: fixed;
+	z-index: 101;
+	text-align: center;
+}
+
+.header-wide-content{
+	color: $fontcolor-1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100vw;
+	justify-content: center;
+	background-color: $bgcolor-white;
+	text-align: center;
+}
+
+.heading-loading-img{
+	max-width: 25vw;
+}

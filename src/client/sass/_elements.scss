@@ -1,0 +1,19 @@
+/*
+* Any generic styles for the site. Shouldn't have any classes or ids for selectors.
+*/
+
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Fascinate+Inline&display=swap');
+
+html{
+	body {
+		color: $fontcolor-1;
+		background: $bgcolor-white;
+		text-align: center;
+		margin: auto;
+		height: 100%;
+	}
+}
+  
+
+  

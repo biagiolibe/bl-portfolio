@@ -20,8 +20,7 @@ export default class Header extends Component{
 		return(
 			<div className = "header-wide">
 				<HeadingLoadingText onLoadingComplete={this.toggleLoadingTextCompleted}/>
-				{this.state.isLoadingTextCompleted && <HeaderSectionContainer />}
-				{/*<HeaderSectionContainer />*/}
+				<HeaderSectionContainer />
 			</div>
 		)
 	}

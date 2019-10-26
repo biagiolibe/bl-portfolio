@@ -22,6 +22,7 @@ export class SkillSection extends Component{
 			>
 				<h3>Skill title</h3>
 			</ScrollableDivSection>
+
 		)
 	}
 }

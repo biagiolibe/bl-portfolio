@@ -1,0 +1,34 @@
+/*
+* Any keyframes or animations that will be used for the site.
+*/
+
+/**
+* Animation
+**/
+
+div.animate{
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+  
+	&.animate-translate-up{
+	  animation-name: translate-up;
+	  animation-duration: 1.5s;
+	  animation-delay: 6.5s;
+}
+	
+	&.animate-translate-left{
+	  animation-name: translate-side;
+	  animation-duration: 1s;
+	  animation-delay: 3.5s;
+	}
+} 
+  
+@keyframes translate-up{
+	from {transform : translateY(0vh) } 
+	to { transform : translateY(-100vh) }/* slide up to off-screen */
+}
+  
+@keyframes translate-side{
+	from {transform : translate(0vw) } 
+	to { transform : translate(-100vw) }/* slide left to off-screen */
+}

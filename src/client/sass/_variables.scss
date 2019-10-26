@@ -1,0 +1,39 @@
+/*
+* Any variables that will be used throughout styles
+*/
+
+/* Background color */
+$bgcolor-white: #ffffff;
+$bgcolor-1: #717da8;
+$bgcolor-1-dark: #414A6B;
+$bgcolor-2: #f3c130;
+$bgcolor-3: #18966c;
+$bgcolor-4: #ff5851;
+$bgcolor-5: #1c1b20;
+
+/* Font */
+$fontcolor-white:#ffffff;
+$fontcolor-1: #1c1b20;
+$fontcolor-2: #f3c130;
+$fontcolor-3: #414a6b;
+
+$fontfamily-journal:'DM Serif Text';
+$fontfamily-title:'Fascinate Inline';
+
+:export { 
+	bgcolorWhite: $bgcolor-white;
+	bgcolor1: $bgcolor-1;
+	bgcolor1Dark: $bgcolor-1-dark;
+	bgcolor2: $bgcolor-2;
+	bgcolor3: $bgcolor-3;
+	bgcolor4: $bgcolor-4;
+	bgcolor5: $bgcolor-5;
+
+	fontcolorWhite: $fontcolor-white;
+	fontcolor1: $fontcolor-1;
+	fontcolor2: $fontcolor-2;
+	fontcolor3: $fontcolor-3;
+
+	fontfamilyJournal: $fontfamily-journal;
+	fontfamilyTitle: $fontfamily-title;
+}

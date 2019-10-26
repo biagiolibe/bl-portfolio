@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {ScrollableDivSection} from './StyledComps';
+import {ScrollableDivSection, Keyword} from './StyledComps';
+import styles from '../sass/app.scss';
 
 export class BioSection extends Component{
 	constructor(props) {
@@ -13,14 +14,23 @@ export class BioSection extends Component{
 	
 	render(){
 		let isInTop = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
-		console.log('bio top -> ',isInTop);
 		return(
 			<ScrollableDivSection className="bio-section section" 
 			ref={this.ref}
 			hasToScroll={isInTop}
 			scroll={this.props.height}
 			>
-				<h3>Bio title</h3>
+				<div className="section-title">About me</div>
+				<div className="padding">
+					<div className="aboutme-content-text">
+						<div>
+							I have a strong motivation, a high enthusiasm and a great passion for everything I do, so issues become <Keyword background={styles.bgcolorWhite} textColor={styles.fontcolor1}>“challenges”</Keyword>.
+						</div>
+						<div>
+							A <Keyword background={styles.bgcolor5} textColor={styles.fontcolor2}>“steady”</Keyword> will in pursuing my goals is my strenght. Aiming always high is my life way.
+						</div>
+					</div>
+				</div>
 			</ScrollableDivSection>
 		)
 	}

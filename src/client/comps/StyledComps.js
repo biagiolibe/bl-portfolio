@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import styles from '../sass/app.scss';
 
 
 
@@ -9,3 +10,12 @@ export const ScrollableDivSection =
 			/*position: props.hasToScroll && 'fixed'*/
 		},
 	  }))``
+
+export const Keyword = 
+	styled.span.attrs(props => ({
+		style: {
+			boxShadow: '1px 1px 12px -2px '+styles.bgcolor5,
+			background: props.background,
+			color:props.textColor
+		},
+	}))``
