@@ -2,20 +2,14 @@
 Body style
 */
 
-.padding{
-	padding: 12vw;
+.body-content{
+	background-color: $bgcolor-white;
+	overflow: hidden;
+	position: absolute;
 }
 
-.keyword{
-	box-shadow: 1px 1px 12px -2px #1c1b20;
-	&.black-yellow{
-		background: $bgcolor-5;
-		color: $fontcolor-2;
-	}
-	&.grey-black{
-		background: $bgcolor-white;
-		color: $fontcolor-1;
-	}
+.padding{
+	padding: 12vw;
 }
 
 .section{
@@ -37,11 +31,7 @@ Body style
 	font-family: $fontfamily-title;
 }
 
-.body-content{
-	background-color: $bgcolor-white;
-	overflow: hidden;
-	position: absolute;
-}
+
 
 
 
