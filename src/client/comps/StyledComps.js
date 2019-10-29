@@ -7,8 +7,7 @@ export const ScrollableDivSection =
 	styled.div.attrs(props => ({
 		className:'section',
 		style: {
-			transform:props.hasToScroll && 'matrix(1, 0, 0, 1, 0,'+props.scroll/2+')'
-			/*position: props.hasToScroll && 'fixed'*/
+			transform:props.shouldMove && 'matrix(1, 0, 0, 1, 0,'+props.yTranslation+')'
 		}		
 	  }))``
 
@@ -21,3 +20,9 @@ export const Keyword =
 		},
 	}))``
 
+export const FloatingTitle = 
+styled.div.attrs(props => ({
+	style: {
+		transform:props.isFloating && 'translateY('+props.scroll/2+'px)'
+	}
+}))``

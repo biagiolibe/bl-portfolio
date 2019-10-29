@@ -16,7 +16,7 @@ export class HeaderSection extends Component{
 		
 	render(){
 		let animationActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
-		console.log('header active -> ',animationActive);
+		//console.log('header active -> ',animationActive);
 		return(
 			<ScrollableDivSection className="header-intro section" 
 			ref={this.ref}

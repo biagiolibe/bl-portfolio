@@ -22,6 +22,10 @@ Body style
 	text-align: center;
 }
 
+.full-height{
+	height: 100vh;
+}
+
 .section-title{
 	top: 30px;
 	position: absolute;
@@ -30,10 +34,6 @@ Body style
 	color: $fontcolor-3;
 	font-family: $fontfamily-title;
 }
-
-
-
-
 
 .bio-section{
 	z-index: 3;
@@ -44,8 +44,9 @@ Body style
 		color: $fontcolor-1;
 		font-size: 5vh;
 		font-family: $fontfamily-journal;
+		
 		div{
-		padding: 5vh 0;
+			padding: 5vh 0;
 		}
 	}	
 }
@@ -55,4 +56,20 @@ Body style
 	z-index: 9;
 	position: relative;
 	background-color: $bgcolor-white;
+	
+	.preamble{
+
+	}
+
+	.tech-skill-content{
+
+	}
+
+}
+
+.big-title-center{
+	text-align: left;
+	font-family: $fontfamily-title;
+	font-size: 50px;
+	padding: 50vh 0;
 }

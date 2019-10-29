@@ -1,24 +1,25 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {ScrollableDivSection, Keyword} from './StyledComps';
 import styles from '../sass/app.scss';
 
-export class BioSection extends Component{
+export class BioSection extends PureComponent{
 	constructor(props) {
 		super(props);
 		this.ref=React.createRef()
 	}
 
 	componentDidMount(){
-		this.ref=React.createRef();
+		let offsetTop = this.ref.current.getBoundingClientRect().top + (document.body.scrollTop || document.documentElement.scrollTop);
+		//let isActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0 && this.ref.current.getBoundingClientRect().y>-610 : false;
+		this.props.registerToStore(2,offsetTop,offsetTop,0);
 	}
 	
 	render(){
-		let isInTop = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
 		return(
 			<ScrollableDivSection className="bio-section" 
 			ref={this.ref}
-			hasToScroll={isInTop}
-			scroll={this.props.height}
+			shouldMove={this.props.shouldMove}
+			yTranslation={this.props.yTranslation/2}
 			>
 				<div className="section-title">About me</div>
 				<div className="padding">

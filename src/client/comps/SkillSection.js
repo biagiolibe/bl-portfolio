@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollableDivSection} from './StyledComps';
+import {ScrollableDivSection, FloatingTitle} from './StyledComps';
 
 export class SkillSection extends Component{
 	constructor(props){
@@ -12,16 +12,21 @@ export class SkillSection extends Component{
 	}
 	
 	render(){
-		let isInTop = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
-		console.log('skill top -> ',isInTop);
+		let isFloating = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
+		//console.log('isFloating -> ',isFloating);
 		return(
-			<ScrollableDivSection className="skill-section section" 
-			ref={this.ref}
-			hasToScroll={isInTop}
-			scroll={this.props.height}
-			>
-				<h3>Skill title</h3>
-			</ScrollableDivSection>
+			<div className="skill-section">
+				<div className="preamble full-height">
+					<FloatingTitle
+						ref={this.ref}
+						scroll={this.props.height}
+						isFloating={isFloating} 
+						className="big-title-center">A developer first</FloatingTitle>
+				</div>
+				<div className="full-height">
+					skills go here
+				</div>
+			</div>
 
 		)
 	}

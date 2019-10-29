@@ -24,9 +24,11 @@ componentWillUnmount() {
 handleScroll = () => {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   const windowHeight = window.innerHeight || window.screen.height;
-  const scrolled = winScroll % windowHeight;
+  console.log('scroll -> ',winScroll);
+  const scrolled = winScroll;
+  const normScrolled = winScroll % windowHeight;
 
-  const produceScroll = ()=> this.props.dispatch(scroll(scrolled, scrolled));
+  const produceScroll = ()=> this.props.dispatch(scroll(scrolled, normScrolled));
   
   produceScroll();
   

@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux'
 import scrolling from './scrolling'
+import registerComponent from './registerComponent'
 
-export default combineReducers({
-  scrolling
+const rootReducer = combineReducers({
+  scrolling: scrolling,
 })
+
+export default rootReducer
