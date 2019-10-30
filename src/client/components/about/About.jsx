@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
-import {ScrollableDivSection, Keyword} from './StyledComps';
-import styles from '../sass/app.scss';
+import {ScrollableDivSection, Keyword} from '../styled/StyledComps';
+import styles from '../../sass/app.scss';
 
-export class BioSection extends PureComponent{
+export class About extends PureComponent{
 	constructor(props) {
 		super(props);
 		this.ref=React.createRef()

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import ContentLoading from './ContentLoading';
 
-export class HeadingText extends Component{
+export default class HeadingText extends Component{
 	constructor(props){
 		super(props);
 		this.state={
@@ -30,10 +29,10 @@ export class HeadingText extends Component{
 		return(
 			<div className="header-wide-content">
 				<div className="header-wide-content-title">
-					{headerData.title ? <h1>{`${headerData.title}`}</h1> : <ContentLoading/>}
+					{headerData.title ? <h1>{`${headerData.title}`}</h1> : "Loading content"}
 				</div>
 				<div className="header-wide-content-text">
-					{headerData.subtitle ? <h4>{`${headerData.subtitle}`}</h4>: <ContentLoading/>}
+					{headerData.subtitle ? <h4>{`${headerData.subtitle}`}</h4>: "Loading content"}
 				</div>
 			</div>
 		)

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import styles from '../sass/app.scss';
+import styles from '../../sass/app.scss';
 
 //attrs method, together with a style object, is used for frequently changing styles
 

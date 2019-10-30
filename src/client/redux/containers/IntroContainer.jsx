@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import {HeaderSection} from '../../comps/HeaderSection'
+import Intro from '../../components/intro/Intro'
 
 const mapStateToProps = (state) => {
   return{
@@ -9,4 +9,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps
-)(HeaderSection)
+)(Intro)

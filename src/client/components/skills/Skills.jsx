@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {ScrollableDivSection, FloatingTitle} from './StyledComps';
+import { FloatingTitle } from '../styled/StyledComps';
 
-export class SkillSection extends Component{
+export default class Skills extends Component{
 	constructor(props){
 		super(props);
 		this.ref=React.createRef()

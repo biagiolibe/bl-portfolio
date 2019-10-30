@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {scroll} from './redux/actions';
-import './sass/app.scss';
-import Header from './comps/Header';
-import Body from './comps/Body';
-import Footer from './comps/Footer';
+import {scroll} from '../../redux/actions';
+import {Header} from '../intro';
+import {Footer} from '../footer';
+import {AboutContainer, SkillsContainer} from '../../redux/containers';
+
 
 class App extends Component {
   constructor(props) {
@@ -24,27 +24,25 @@ componentWillUnmount() {
 handleScroll = () => {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   const windowHeight = window.innerHeight || window.screen.height;
-  console.log('scroll -> ',winScroll);
+  console.log('scrolled -> ',winScroll);
   const scrolled = winScroll;
   const normScrolled = winScroll % windowHeight;
 
   const produceScroll = ()=> this.props.dispatch(scroll(scrolled, normScrolled));
   
   produceScroll();
-  
 }
 
   render() {
     return (
       <div>
         <Header />
-        <Body/>
+        <AboutContainer/>
+        <SkillsContainer />
         <Footer/>
       </div>
     );
   }
 }
-
-
 
 export default connect()(App);

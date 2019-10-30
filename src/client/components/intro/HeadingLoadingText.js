@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import helloAnimation from '../../../public/hello-animation.gif';
+import helloAnimation from '../../../../public/hello-animation.gif';
 import 'rc-texty/assets/index.css';
 
-export class HeadingLoadingText extends Component{
+export default class HeadingLoadingText extends Component{
 	constructor(props){
 		super(props);
 	}

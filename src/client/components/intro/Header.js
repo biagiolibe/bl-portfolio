@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-
-import {HeadingLoadingText} from './HeadingLoadingText';
-import {HeaderSection} from './HeaderSection';
-import HeaderSectionContainer from '../redux/containers/HeaderSectionContainer';
+import HeadingLoadingText from './HeadingLoadingText';
+import {IntroContainer} from '../../redux/containers';
 
 export default class Header extends Component{
 	constructor(props) {
@@ -20,7 +18,7 @@ export default class Header extends Component{
 		return(
 			<div className = "header-wide">
 				<HeadingLoadingText onLoadingComplete={this.toggleLoadingTextCompleted}/>
-				<HeaderSectionContainer />
+				<IntroContainer />
 			</div>
 		)
 	}

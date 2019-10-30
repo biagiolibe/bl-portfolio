@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { BioSection } from '../../comps/BioSection';
+import {About} from '../../components/about/About';
 import {registerToStore} from '../actions'
 
 const elementId = 2;
@@ -26,4 +26,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BioSection)
+)(About)

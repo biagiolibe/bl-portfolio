@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { SkillSection } from '../../comps/SkillSection';
+import {Skills} from '../../components/skills';
 
 const mapStateToProps = (state) => {
   return{
@@ -10,4 +10,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps
-)(SkillSection)
+)(Skills)

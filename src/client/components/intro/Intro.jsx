@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {HeadingText} from './HeadingText';
-import {ScrollableDivSection} from './StyledComps';
-import {Logo} from './Logo';
+import HeadingText from './HeadingText';
+import {ScrollableDivSection} from '../styled/StyledComps';
 
-export class HeaderSection extends Component{
+export default class Intro extends Component{
 	constructor(props) {
 		super(props);
 		this.ref=React.createRef()

@@ -1,7 +1,7 @@
 {
     "name": "bl-portfolio",
     "version": "0.0.1",
-    "description": "My own bio web site",
+    "description": "Biagio Liberto web site",
     "main": "src/server/index.js",
     "scripts": {
         "build": "webpack --mode production",
