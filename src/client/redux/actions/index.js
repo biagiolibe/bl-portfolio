@@ -5,10 +5,12 @@ export const scroll = (winScroll,normScrolled) => ({
   })
 
 
-export const registerToStore = (elementId, absPosition, startTranslationPos, lastYTranslation) => ({
+export const registerToStore = (elementId, absPosition, startTranslationPos, startYValue,endYValue, initialHeight) => ({
 	type: 'REGISTER',
 	elementId: elementId,
 	absPosition: absPosition,
 	changeFrom: startTranslationPos,
-	lastYTranslation: lastYTranslation
+	startYValue: startYValue,
+	endYValue:endYValue,
+	initialHeight: initialHeight
 })

@@ -21,11 +21,6 @@ export default class Intro extends Component{
 			hasToScroll={animationActive}
 			scroll={(-this.props.height)}
 			>
-				{/*
-				<Navbar color="inverse" light expand="md" className="header-nav">
-					<NavbarBrand><Logo/></NavbarBrand>
-				</Navbar>
-				*/}
 				<HeadingText />
 			</ScrollableDivSection>
 		)

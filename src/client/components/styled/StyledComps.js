@@ -7,7 +7,7 @@ export const ScrollableDivSection =
 	styled.div.attrs(props => ({
 		className:'section',
 		style: {
-			transform:props.shouldMove && 'matrix(1, 0, 0, 1, 0,'+props.yTranslation+')'
+			transform:'matrix(1, 0, 0, 1, 0,'+props.yTranslation+')'
 		}		
 	  }))``
 

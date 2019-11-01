@@ -14,12 +14,17 @@ const mapStateToProps = (state) => {
       shouldMove:element.shouldMove
     }
   }
+  else{
+    return{
+      yTranslation: element.whileFixedTranslation,
+    }
+  }
   
 };
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    registerToStore: (id, offsetTop, moveFrom, lastYTranslation)=> dispatch(registerToStore(id, offsetTop, moveFrom,lastYTranslation))
+    registerToStore: (id, offsetTop, moveFrom, startYValue, endYValue, initialHeight)=> dispatch(registerToStore(id, offsetTop, moveFrom,startYValue, endYValue,initialHeight))
   }
 }
 

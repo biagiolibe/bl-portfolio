@@ -9,9 +9,11 @@ export class About extends PureComponent{
 	}
 
 	componentDidMount(){
-		let offsetTop = this.ref.current.getBoundingClientRect().top + (document.body.scrollTop || document.documentElement.scrollTop);
+		let boundingElement = this.ref.current.getBoundingClientRect();
+		let offsetTop = boundingElement.top + (document.body.scrollTop || document.documentElement.scrollTop);
+		
 		//let isActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0 && this.ref.current.getBoundingClientRect().y>-610 : false;
-		this.props.registerToStore(2,offsetTop,offsetTop,0);
+		this.props.registerToStore(2,offsetTop,offsetTop,0, boundingElement.height,boundingElement.height);
 	}
 	
 	render(){

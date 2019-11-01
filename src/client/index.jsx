@@ -6,7 +6,7 @@ import rootReducer from './redux/reducers'
 import App from './components/app/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render( 
 <Provider store={store}>
