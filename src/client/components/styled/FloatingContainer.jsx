@@ -1,17 +1,17 @@
 import { connect } from 'react-redux'
-import {Floating} from '../../components/styled';
-import {registerToStore} from '../actions'
+import {Floating} from '.';
+import {registerToStore} from '../../utils/redux-actions'
 
-const elementId = 21;
 
-const mapStateToProps = (state) => {
-  let element = state.scrolling.translatingOnScroll.find(el => (el.elementId==elementId));
+const mapStateToProps = (state, ownProps) => {
+  var registrId = ownProps.identifier;
+  let element = state.scrolling.translatingOnScroll.find(el => (el.elementId==registrId));
   if(!element) return {translation:{x:0,y:0}}
 
   if(element.shouldMove){
     return{
       translation: element.translation,
-      shouldMove:element.shouldMove
+      shouldMove:element.shouldMove,
     }
   }
   else{

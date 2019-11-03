@@ -32,22 +32,22 @@ const scrolling = (state = initialState, action) => {
 				let shouldChangeElements = [];
 				let percentScrolling=(action.normScrolled*100)/state.windowHeight;
 				state.translatingOnScroll.forEach(element => {
-					let elementAbsPos = {
-						x:element.endYValue.x-element.startYValue.x,
-						y:element.endYValue.y-element.startYValue.y
+					let totalShifting = {
+						x:Math.abs(element.endingPosition.x-element.startingPosition.x),
+						y:Math.abs(element.endingPosition.y-element.startingPosition.y)
 					}
 					shouldChangeElements = [...shouldChangeElements,
 						Object.assign({}, element, 
 							{
-								shouldMove:(element.changeFrom <= action.scrolled && action.scrolled < element.changeFrom+element.initialHeight)
+								shouldMove:(element.movingFrom <= action.scrolled && action.scrolled < element.movingFrom+element.initialHeight)
 							},
 							{
-								whileFixedTranslation:(element.changeFrom > action.scrolled)?element.startYValue:((action.scrolled >= element.changeFrom+element.initialHeight)?element.endYValue:null)
+								whileFixedTranslation:(element.movingFrom > action.scrolled)?element.startingPosition:((action.scrolled >= element.movingFrom+element.initialHeight)?element.endingPosition:null)
 							},
 							{
 								translation:{
-									x:(elementAbsPos.x*percentScrolling)/100,
-									y:(elementAbsPos.y*percentScrolling)/100
+									x:element.startingPosition.x-((element.startingPosition.x<element.endingPosition.x?-1:1)*((totalShifting.x*percentScrolling)/100)),
+									y:element.startingPosition.y-((element.startingPosition.y<element.endingPosition.y?-1:1)*((totalShifting.y*percentScrolling)/100))
 								}
 							}
 							)
@@ -70,10 +70,11 @@ const scrolling = (state = initialState, action) => {
 					{
 						elementId:action.elementId,
 						absPosition:action.absPosition, 
-						changeFrom:action.changeFrom,
-						endYValue:action.endYValue,
-						startYValue:action.startYValue,
-						initialHeight:action.initialHeight
+						movingFrom:action.movingFrom,
+						endingPosition:action.endingPosition,
+						startingPosition:action.startingPosition,
+						initialHeight:action.initialHeight,
+						translation:action.startingPosition
 					}
 				]
 			})

@@ -26,6 +26,10 @@ Body style
 	height: 100vh;
 }
 
+.full-width{
+	width: 100vw;
+}
+
 .section-title{
 	top: 30px;
 	position: absolute;
@@ -56,6 +60,7 @@ Body style
 	z-index: 9;
 	position: relative;
 	background-color: $bgcolor-white;
+	overflow: hidden;
 	
 	.preamble{
 
@@ -72,4 +77,15 @@ Body style
 	font-family: $fontfamily-title;
 	font-size: 50px;
 	padding: 50vh 0;
+}
+
+.lang-skill-card{
+	padding-top:70vh;
+	padding-left: 50vw;
+}
+
+.skills-background{
+	z-index: -10;
+	background: $bgcolor-1;
+	overflow: hidden;	
 }

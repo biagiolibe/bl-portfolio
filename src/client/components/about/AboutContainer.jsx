@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import {About} from '../../components/about/About';
-import {registerToStore} from '../actions'
+import {About} from './About';
+import {registerToStore} from '../../utils/redux-actions'
 
 const elementId = 2;
 
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    registerToStore: (id, offsetTop, moveFrom, startYValue, endYValue, initialHeight)=> dispatch(registerToStore(id, offsetTop, moveFrom,startYValue, endYValue,initialHeight))
+    registerToStore: (id, offsetTop, moveFrom, startPosition, endPosition, initialHeight)=> dispatch(registerToStore(id, offsetTop, moveFrom,startPosition, endPosition,initialHeight))
   }
 }
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import HeadingLoadingText from './HeadingLoadingText';
-import {IntroContainer} from '../../redux/containers';
+import IntroContainer from './IntroContainer';
 
 export default class Header extends Component{
 	constructor(props) {

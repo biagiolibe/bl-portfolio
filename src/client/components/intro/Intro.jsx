@@ -9,17 +9,19 @@ export default class Intro extends Component{
 	}
 
 	componentDidMount(){
-		this.ref=React.createRef();
+		let boundingElement = this.ref.current.getBoundingClientRect();
+		let offsetTop = boundingElement.top + (document.body.scrollTop || document.documentElement.scrollTop);
+		
+		//let isActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0 && this.ref.current.getBoundingClientRect().y>-610 : false;
+		this.props.registerToStore(1,offsetTop,offsetTop,{x:0,y:0}, {x:0,y:boundingElement.height},boundingElement.height);
 	}
 		
 	render(){
-		let animationActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0: false;
-		//console.log('header active -> ',animationActive);
 		return(
 			<ScrollableDivSection className="header-intro section" 
 			ref={this.ref}
-			hasToScroll={animationActive}
-			scroll={(-this.props.height)}
+			shouldMove={this.props.shouldMove}
+			yTranslation={this.props.yTranslation/2}
 			>
 				<HeadingText />
 			</ScrollableDivSection>

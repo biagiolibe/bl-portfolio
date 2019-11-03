@@ -7,12 +7,12 @@ export const scroll = (winScroll,normScrolled, windowHeight, pageHeight) => ({
   })
 
 
-export const registerToStore = (elementId, absPosition, startTranslationPos, startYValue,endYValue, initialHeight) => ({
+export const registerToStore = (elementId, absPosition, movingFrom, startingPosition,endingPosition, initialHeight) => ({
 	type: 'REGISTER',
 	elementId: elementId,
 	absPosition: absPosition,
-	changeFrom: startTranslationPos,
-	startYValue: startYValue,
-	endYValue:endYValue,
+	movingFrom: movingFrom,
+	startingPosition: startingPosition,
+	endingPosition:endingPosition,
 	initialHeight: initialHeight
 })

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
-import Intro from '../../components/intro/Intro'
+import {Skills} from '.';
 
 const mapStateToProps = (state) => {
   return{
-    height: state.scrolling.scrolled
+    scrolled: state.scrolling.scrolled,
+    normScrolled: state.scrolling.normScrolled
   }
 };
 
 export default connect(
   mapStateToProps
-)(Intro)
+)(Skills)

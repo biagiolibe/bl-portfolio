@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {scroll} from '../../redux/actions';
+import {scroll} from '../../utils/redux-actions';
 import {Header} from '../intro';
 import {Footer} from '../footer';
-import {AboutContainer, SkillsContainer} from '../../redux/containers';
+import {AboutContainer} from '../about';
+import {SkillsContainer} from '../skills';
 
 
 class App extends Component {
