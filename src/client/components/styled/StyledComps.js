@@ -23,6 +23,6 @@ export const Keyword =
 export const FloatingTitle = 
 styled.div.attrs(props => ({
 	style: {
-		transform:props.isFloating && 'translateY('+props.scroll/2+'px)'
+		transform:props.position &&'translate('+props.position.x+','+props.position.y+'px)'
 	}
 }))``

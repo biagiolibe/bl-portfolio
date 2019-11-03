@@ -1,7 +1,9 @@
-export const scroll = (winScroll,normScrolled) => ({
+export const scroll = (winScroll,normScrolled, windowHeight, pageHeight) => ({
 	type: 'SCROLL',
 	scrolled: winScroll,
-	normScrolled: normScrolled
+	normScrolled: normScrolled,
+	windowHeight: windowHeight,
+	pageHeight: pageHeight
   })
 
 

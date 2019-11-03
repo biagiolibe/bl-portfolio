@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { FloatingTitle } from '../styled/StyledComps';
+import { FloatingContainer } from '../../redux/containers';
 
 export default class Skills extends Component{
 	constructor(props){
@@ -17,11 +17,7 @@ export default class Skills extends Component{
 		return(
 			<div className="skill-section">
 				<div className="preamble full-height">
-					<FloatingTitle
-						ref={this.ref}
-						scroll={this.props.height}
-						isFloating={isFloating} 
-						className="big-title-center">A developer first</FloatingTitle>
+					<FloatingContainer content="A developer first"></FloatingContainer>
 				</div>
 				<div className="full-height">
 					skills go here

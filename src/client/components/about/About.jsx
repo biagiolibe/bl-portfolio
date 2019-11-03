@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {ScrollableDivSection, Keyword} from '../styled/StyledComps';
+import {ScrollableDivSection, Keyword} from '../styled';
 import styles from '../../sass/app.scss';
 
 export class About extends PureComponent{
@@ -13,7 +13,7 @@ export class About extends PureComponent{
 		let offsetTop = boundingElement.top + (document.body.scrollTop || document.documentElement.scrollTop);
 		
 		//let isActive = this.ref.current ? this.ref.current.getBoundingClientRect().y<=0 && this.ref.current.getBoundingClientRect().y>-610 : false;
-		this.props.registerToStore(2,offsetTop,offsetTop,0, boundingElement.height,boundingElement.height);
+		this.props.registerToStore(2,offsetTop,offsetTop,{x:0,y:0}, {x:0,y:boundingElement.height},boundingElement.height);
 	}
 	
 	render(){
