@@ -4,11 +4,12 @@
 
 /* Background color */
 $bgcolor-white: #ffffff;
-$bgcolor-1: #717da8;
-$bgcolor-1-dark: #414A6B;
+$bgcolor-1-light: #717da8;
+$bgcolor-1: #414A6B;
 $bgcolor-2: #f3c130;
 $bgcolor-3: #ff5851;
 $bgcolor-4: #1c1b20;
+$bgcolor-grey: #f8f8f8;
 $bgcolor-5: #18966c;
 
 /* Font */
@@ -23,11 +24,12 @@ $fontfamily-primary:'Lato';
 
 :export { 
 	bgcolorWhite: $bgcolor-white;
+	bgcolor1Light: $bgcolor-1-light;
 	bgcolor1: $bgcolor-1;
-	bgcolor1Dark: $bgcolor-1-dark;
 	bgcolor2: $bgcolor-2;
 	bgcolor3: $bgcolor-3;
 	bgcolor4: $bgcolor-4;
+	bgcolorGrey: $bgcolor-grey;
 	bgcolor5: $bgcolor-5;
 
 	fontcolorWhite: $fontcolor-white;

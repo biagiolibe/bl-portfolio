@@ -10,9 +10,9 @@ export default class Floating extends PureComponent{
 	componentDidMount(){
 		let boundingElement = this.ref.current.getBoundingClientRect();
 		let offsetTop = boundingElement.top + (document.body.scrollTop || document.documentElement.scrollTop);
-		let movingFrom = offsetTop;
 		const windowHeight = window.innerHeight || window.screen.height;
 		const windowWidth = window.innerWidth || window.screen.width;
+		let movingFrom = (offsetTop-(offsetTop%windowHeight)) - (this.props.startWhenVisible?windowHeight:0);
 		let startingPosition = {
 			x:this.props.horizontal?(this.props.horizontal.from*windowWidth)/100:0,
 			y:this.props.vertical?(this.props.vertical.from*windowHeight)/100:0

@@ -28,6 +28,7 @@ handleScroll = () => {
   const pageHeight = document.body.offsetHeight || document.documentElement.offsetHeight;
   const scrolled = winScroll;
   const normScrolled = winScroll % windowHeight;
+  console.log('height -> ',windowHeight)
 
   const produceScroll = ()=> this.props.dispatch(scroll(scrolled, normScrolled, windowHeight, pageHeight));
   

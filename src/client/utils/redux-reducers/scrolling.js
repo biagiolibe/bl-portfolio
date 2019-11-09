@@ -28,14 +28,15 @@ const scrolling = (state = initialState, action) => {
 	
 	switch (action.type) {
 		case 'SCROLL':
-			if(Math.floor(action.normScrolled)>0 && action.scrolled<(action.pageHeight-action.windowHeight)){//I did not achive the end or start of page 
+			if(Math.floor(action.normScrolled)>=0 && action.scrolled<=(action.pageHeight-action.windowHeight)){//I did not achive the end or start of page 
 				let shouldChangeElements = [];
-				let percentScrolling=(action.normScrolled*100)/state.windowHeight;
+				let percentScrolling=(action.normScrolled*100)/action.windowHeight;
 				state.translatingOnScroll.forEach(element => {
 					let totalShifting = {
 						x:Math.abs(element.endingPosition.x-element.startingPosition.x),
 						y:Math.abs(element.endingPosition.y-element.startingPosition.y)
 					}
+					
 					shouldChangeElements = [...shouldChangeElements,
 						Object.assign({}, element, 
 							{
