@@ -1,4 +1,5 @@
 import React from 'react';
+import { SkillCard } from '../../utils/graphics';
 
 export const DevIntroText = () => {
 	return(
@@ -18,3 +19,33 @@ export const DevIntroTitle = () => {
 		</div>
 	)
 };
+
+export const BEDevelopmentCard = () => {
+	return(
+		<SkillCard 
+		title={<span>Back-end Development</span>} 
+		paragraphText={<span>Designing and developing server side application. Behind the scenes of the user interface component</span>}
+		/>
+	)
+};
+
+export const FEDevelopmentCard = () => {
+	return(
+		<SkillCard 
+		title={<span>Front-end Development</span>} 
+		paragraphText={<span>Working on the user interface for creating beautiful things</span>}
+		/>
+	)
+};
+
+export const Devops = () => {
+	return(
+		<SkillCard 
+		title={<span>Devops is a serious Matter</span>} 
+		paragraphText={<span>Like a software engineer optimizes an algorithm, a DevOps engineer optimizes the software engineering process.</span>}
+		/>
+	)
+};
+
+
+

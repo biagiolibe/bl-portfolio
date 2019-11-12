@@ -18,9 +18,9 @@ $fontcolor-1: #1c1b20;
 $fontcolor-2: #f3c130;
 $fontcolor-3: #414a6b;
 
-$fontfamily-journal:'DM Serif Text';
-$fontfamily-title:'Fascinate Inline';
-$fontfamily-primary:'Lato';
+$fontfamily-journal:'Libre Baskerville', serif;
+$fontfamily-title:'Fascinate Inline', cursive;
+$fontfamily-primary:'Montserrat', sans-serif;
 
 :export { 
 	bgcolorWhite: $bgcolor-white;

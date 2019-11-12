@@ -5,6 +5,7 @@ import {Header} from '../intro';
 import {Footer} from '../footer';
 import {AboutContainer} from '../about';
 import {SkillsContainer} from '../skills';
+import {CareerContainer} from '../career';
 
 
 class App extends Component {
@@ -28,7 +29,6 @@ handleScroll = () => {
   const pageHeight = document.body.offsetHeight || document.documentElement.offsetHeight;
   const scrolled = winScroll;
   const normScrolled = winScroll % windowHeight;
-  console.log('height -> ',windowHeight)
 
   const produceScroll = ()=> this.props.dispatch(scroll(scrolled, normScrolled, windowHeight, pageHeight));
   
@@ -41,6 +41,7 @@ handleScroll = () => {
         <Header />
         <AboutContainer/>
         <SkillsContainer />
+        <CareerContainer />
         <Footer/>
       </div>
     );

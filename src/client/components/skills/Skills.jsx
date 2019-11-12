@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { FloatingContainer } from '../styled';
 import {Container, Row, Col} from 'react-bootstrap';
-import {DevIntroText, DevIntroTitle} from './SkillsTexts'
+import {DevIntroText, DevIntroTitle, BEDevelopmentCard, FEDevelopmentCard, Devops} from './SkillsTexts'
 
 export default class Skills extends Component{
 	constructor(props){
@@ -52,6 +52,14 @@ export default class Skills extends Component{
 								styleClass="skills-background full-height"
 								vertical={{from:0, to:20}} 
 								startWhenVisible
+								content=
+								{
+								<div>
+									<BEDevelopmentCard />
+									<FEDevelopmentCard />
+									<Devops />
+								</div>
+								}
 							></FloatingContainer>
 						</Col>
 					</Row>

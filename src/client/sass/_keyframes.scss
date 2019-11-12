@@ -32,3 +32,112 @@ div.animate{
 	from {transform : translate(0vw) } 
 	to { transform : translate(-100vw) }/* slide left to off-screen */
 }
+
+
+
+/* stroke animation*/
+.stroke-animate-show{
+	cursor:pointer;
+}
+
+.stroke-animate:before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: transparent;
+	border: 2px solid transparent;
+  }
+
+  .stroke-animate-show:hover + .stroke-animate:before{
+	border: 2px solid $fontcolor-1;
+	animation: animate-stroke-before 1s linear forwards;
+}
+  
+  @keyframes animate-stroke-before{
+	0%{
+	  width: 0;
+	  height: 0;
+	  border-bottom-color: transparent;
+	  border-left-color: transparent;
+	  border-right-color: transparent;
+	}
+	50%{
+	  width: 100%;
+	  height: 0;
+	  border-bottom-color: transparent;
+	  border-left-color: transparent;
+
+	}
+	100%{
+	  width: 100%;
+	  height: 100%;
+	  border-bottom-color: transparent;
+	  border-left-color: transparent;
+	}
+  }
+  
+  .stroke-animate:after{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	background: transparent;
+	border: 2px solid transparent;
+  }
+
+  .stroke-animate-show:hover + .stroke-animate:after{
+	border: 2px solid $fontcolor-1;
+	animation: animate-stroke-after 1s linear forwards;
+  }
+  @keyframes animate-stroke-after{
+	0%{
+	  width: 0;
+	  height: 0;
+	  border-top-color: transparent;
+	  border-bottom-color: transparent;
+	  border-left-color: $fontcolor-1;
+	  border-right-color: transparent;
+	}
+	50%{
+	  width: 0;
+	  height: 100%;
+	  border-top-color: transparent;
+	  border-bottom-color: $fontcolor-1;
+	  border-left-color: $fontcolor-1;
+	  border-right-color: transparent;
+	}
+	100%{
+	  width: 100%;
+	  height: 100%;
+	  border-top-color: transparent;
+	  border-bottom-color: $fontcolor-1;
+	  border-left-color: $fontcolor-1;
+	  border-right-color: transparent;
+	}
+  }
+
+  .background-animate::before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 0;
+	height: 100%;
+	background: #fff;
+	transition: width 0.5s;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+  }
+
+.background-animate-activate:hover + .stroke-animate .background-animate::before{
+	width: 100%;
+}
+
+.card-animate:hover + .svg-polyline{
+	margin-left: 90%;
+}
