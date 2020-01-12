@@ -57,11 +57,14 @@ Body style
 
 .svg-separator{
 	height: 6px;
-    position: relative;
-    top: -8px;
+	position: absolute;
+	top:-8px;
+	transition: top 0.5s;
+	-webkit-transition: top 0.5s;
+	-moz-transition: top 0.5s;
 }
 .svg-polyline{
-	height: 55px;
+	height: 100%;
 	position: absolute;
 	margin-left: 0;
 	transition: margin-left 1s;

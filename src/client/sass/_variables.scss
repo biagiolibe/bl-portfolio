@@ -8,12 +8,13 @@ $bgcolor-1-light: #717da8;
 $bgcolor-1: #414A6B;
 $bgcolor-2: #f3c130;
 $bgcolor-3: #ff5851;
-$bgcolor-4: #1c1b20;
+$bgcolor-4: #333333;
 $bgcolor-grey: #f8f8f8;
 $bgcolor-5: #18966c;
 
 /* Font */
 $fontcolor-white:#ffffff;
+$fontcolor-grey: #dcdcdc;
 $fontcolor-1: #1c1b20;
 $fontcolor-2: #f3c130;
 $fontcolor-3: #414a6b;
@@ -33,6 +34,7 @@ $fontfamily-primary:'Montserrat', sans-serif;
 	bgcolor5: $bgcolor-5;
 
 	fontcolorWhite: $fontcolor-white;
+	fontcolorGrey: $fontcolor-grey;
 	fontcolor1: $fontcolor-1;
 	fontcolor2: $fontcolor-2;
 	fontcolor3: $fontcolor-3;

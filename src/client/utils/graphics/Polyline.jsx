@@ -10,6 +10,13 @@ const Polyline = () => {
 			<use href="#polyline" x="0" y="10"/>
 			<use href="#polyline" x="0" y="20"/>
 			<use href="#polyline" x="0" y="30"/>
+			<use href="#polyline" x="0" y="40"/>
+			<use href="#polyline" x="0" y="50"/>
+			<use href="#polyline" x="0" y="60"/>
+			<use href="#polyline" x="0" y="70"/>
+			<use href="#polyline" x="0" y="80"/>
+			<use href="#polyline" x="0" y="90"/>
+			<use href="#polyline" x="0" y="100"/>
 		</svg>
 	)
 }
